@@ -15,9 +15,6 @@
 - SOS report
     - `# sosreport`
 
-- cat grub parameter
-    - `# cat /proc/cmdline`
-
 - display log
     - `# cat /sys/kernel/debug/dri/0/i915_display_info > xxx_i915_display_info.log`
 
@@ -28,6 +25,9 @@
     ***below just for ubuntu***
     - `# sudo /etc/init.d/networking stop`
     - `# sudo /etc/init.d/networking restart`
+
+- Check BIOS version: 
+    - `# dmidecode -t 0`
 ## Ubuntu
 
 ### Command note
@@ -42,14 +42,14 @@
 - Check kernel: 
     - `# uname -r`
 
-- Check BIOS version: 
-    - `# dmidecode -t 0`
-
 - unzip tar
     - `tar -xvf file.tar`
 
 - cpu status
     - `cat /sys/kernel/debug/pmc_core/package_cstate_show`
+
+- check WWAN state
+    - `mmcli -m 0`
 ## RHEL
 
 ### Command note
@@ -62,6 +62,9 @@
 
 - kernel list
     - `# rpm -qa`
+
+- cat grub parameter
+    - `# cat /proc/cmdline`
 
 
 
