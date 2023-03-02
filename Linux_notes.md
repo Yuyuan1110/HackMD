@@ -28,6 +28,9 @@
 
 - Check BIOS version: 
     - `# dmidecode -t 0`
+
+- Check Memory:
+    - `# free -m`
 ## Ubuntu
 
 ### Command note
@@ -36,20 +39,27 @@
     - `# dpkg -i *.deb`
 
 - environment parameter
-    - `# gedit /boot/grub/grub.cfg` or ` gedit /etc/default/grub`\
+    - `# vim /boot/grub/grub.cfg` or ` gedit /etc/default/grub`\
     add parameter at the end of the line which starts with `quite` 
+    
+    the other method
+    - `# vim /etc/default/grub `
+    - `# update-grub`
 
 - Check kernel: 
     - `# uname -r`
 
 - unzip tar
-    - `tar -xvf file.tar`
+    - `tar xvf file.tar.gz`
 
 - cpu status
     - `cat /sys/kernel/debug/pmc_core/package_cstate_show`
 
 - check WWAN state
     - `mmcli -m 0`
+
+- set signature trust to false
+    -  `sudo vim /etc/fwupd/daemon.conf`
 ## RHEL
 
 ### Command note
@@ -65,6 +75,20 @@
 
 - cat grub parameter
     - `# cat /proc/cmdline`
+
+- check UUID
+    - `# blkid`
+
+- How to fix A start job is running for /dev/disk/by-uuid/[partition uuid]
+    - `# vim /etc/fstab`
+    - replace UUID in "swap" line with that show in blkid.
+
+## Chromebook
+
+### Command note
+
+
+### 
 
 
 
