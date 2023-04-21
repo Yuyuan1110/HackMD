@@ -70,3 +70,5 @@
 ### DTM path: /var/www/html/rhel/debuginfo/
 
 ### kernel path: /var/www/html/rhel/x86_64/BaseOS/Packages/
+
+### repoindate: createrepo ./ -p
